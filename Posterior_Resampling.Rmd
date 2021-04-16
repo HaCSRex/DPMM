@@ -1,0 +1,22 @@
+---
+title: "Posterior Resample"
+author: "Chung Shing Rex Ha"
+output: 
+  html_notebook: 
+    toc: yes
+    toc_float:
+      collapsed: TRUE
+    code_folding: "hide"
+editor_options: 
+  chunk_output_type: inline
+---
+
+Posterior resampling 
+
+
+```{r}
+library(magrittr)
+library(Rcpp)
+
+```
+
