@@ -4,6 +4,7 @@
 using namespace Rcpp;
 using namespace arma;
 
+// function of posterior mean
 double mu_post(const arma::colvec x, double x_sigma, double mu_prior, double sigma_prior){
   int n = x.n_rows;
   double a = 1/(1/pow(sigma_prior,2) + n/pow(x_sigma,2));
@@ -11,6 +12,7 @@ double mu_post(const arma::colvec x, double x_sigma, double mu_prior, double sig
   return a*b;
   }
 
+// function of posterior variance
 double sigma_post(const arma::colvec x, double x_sigma, double sigma_prior){
   int n = x.n_rows;
   double a = 1/pow(sigma_prior,2) + n/pow(x_sigma, 2);
